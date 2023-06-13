@@ -6,8 +6,8 @@
     "url": "//promptly-apps.icarus-consult.local/Software/TMXTOOLS/robswap/3.1.0/RobSwap 3.1.0.msi",
     "post_install":[
         "# Rewrite config file",
-        "$executable = $dir + \"ABSOLUTEPATH\\RobSwap\\RobSwap.App.exe\"",
-        "$configPath = $dir + \"ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetCommands\\RobSwap\\config.xml\"",
+        "$executable = $dir + \"\\ABSOLUTEPATH\\RobSwap\\RobSwap.App.exe\"",
+        "$configPath = $dir + \"\\ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetCommands\\RobSwap\\config.xml\"",
         "[xml]$configXML = Get-Content $configPath;",
         "$configXML.PreserveWhitespace = $true;",
         "$configXML.SelectNodes(\"/config\")[0].executable = $executable;",
@@ -26,9 +26,9 @@
         "        Write-Host Could not find a valid Tecnomatix Installation",
         "}",
         "Write-Host \"Tecnomatix detected at \" $emPowerDir",
-        "$xmls = $dir + \"ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetExternalApplications\"",
+        "$xmls = $dir + \"\\ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetExternalApplications\"",
         "Copy-Item $xmls -Destination $eMPowerDir -Force -Recurse",
-        "$cmds = $dir + \"ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetCommands\"",
+        "$cmds = $dir + \"\\ProgramFiles64Folder\\Tecnomatix\\eMPower\\DotNetCommands\"",
         "Copy-Item $cmds -Destination $eMPowerDir -Force -Recurse"
     ],
     "post_uninstall": [
