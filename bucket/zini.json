@@ -28,7 +28,7 @@ v1.0.0 (240102 - bpa):
 ",
     "homepage": "https://icarus-consult.de",
     "license": "non-free",
-    "url": "//promptly-apps.icarus-consult.local/Software/TMXTOOLS/zini/1.0.0/zini_1.0.0.zip",
+    "url": "//promptly-apps.icarus-consult.local/Software/TMXTOOLS/zini/1.1.0/zini_1.1.0.zip",
     "autoupdate": {
         "url": "//promptly-apps.icarus-consult.local/Software/TMXTOOLS/zini/$version/zini_$version.zip"
     },
